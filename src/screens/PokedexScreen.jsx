@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text } from 'react-native';
-import { getPokemon } from '../api/getPokemon';
+import { getPokemon, getPokemonDetails } from '../api/getPokemon';
 
 export default function PokedexScreen() {
+  const [pokemon, setPokemon] = useState([]);
+
   useEffect(() => {
     (async () => {
       await loadPokemon();
@@ -12,7 +14,25 @@ export default function PokedexScreen() {
   const loadPokemon = async () => {
     try {
       const response = await getPokemon();
-      console.log(response);
+      const pokemonArray = [];
+
+      for await (const pokemon of response.results) {
+        const pokemonDetails = await getPokemonDetails(pokemon.url);
+
+        pokemonArray.push({
+          id: pokemonDetails.id,
+          name: pokemonDetails.name,
+          typeA: pokemonDetails.types[0].type.name,
+          typeB:
+            pokemonDetails.types.length > 1
+              ? pokemonDetails.types[1].type.name
+              : null,
+          order: pokemonDetails.order,
+          image: pokemonDetails.sprites.other['official-artwork'].front_default,
+        });
+      }
+
+      setPokemon([...pokemon, ...pokemonArray]);
     } catch (error) {
       console.error(error);
     }
