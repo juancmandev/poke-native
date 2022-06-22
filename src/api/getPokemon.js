@@ -1,9 +1,9 @@
 const API_HOST = 'https://pokeapi.co/api/v2/';
 
-export async function getPokemon() {
+export async function getPokemon(endPointUrl) {
   try {
     const url = `${API_HOST}pokemon?limit=20&offset=0`;
-    const response = await fetch(url);
+    const response = await fetch(endPointUrl || url);
     const result = await response.json();
 
     return result;
