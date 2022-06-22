@@ -54,8 +54,12 @@ const styles = StyleSheet.create({
   },
   bgIdStyle: {
     width: 52,
+    textAlign: 'center',
     borderRadius: 12,
-    padding: 8,
+    paddingTop: 4,
+    paddingBottom: 4,
+    paddingLeft: 8,
+    paddingRight: 8,
     backgroundColor: '#eee',
   },
   textId: {
@@ -70,8 +74,8 @@ const styles = StyleSheet.create({
   },
   image: {
     position: 'absolute',
-    bottom: 2,
-    right: 2,
+    bottom: -4,
+    right: 0,
     width: 90,
     height: 90,
   },
