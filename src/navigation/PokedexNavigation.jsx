@@ -13,7 +13,14 @@ export default function PokedexNavigation() {
         component={PokedexScreen}
         options={{ title: 'Pokédex' }}
       />
-      <Stack.Screen name='Pokémon' component={PokemonScreen} />
+      <Stack.Screen
+        name='Pokémon'
+        component={PokemonScreen}
+        options={{
+          title: '',
+          headerTransparent: true,
+        }}
+      />
     </Stack.Navigator>
   );
 }
