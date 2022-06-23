@@ -6,9 +6,11 @@ import {
   View,
   Text,
 } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import { getColorByType } from '../utils/getColorByType';
 
 export default function PokemonCard(props) {
+  const navigation = useNavigation();
   const { pokemon } = props;
   const bgStyle = {
     backgroundColor: `${getColorByType(pokemon.typeA)}`,
@@ -16,7 +18,7 @@ export default function PokemonCard(props) {
   };
 
   const goToPokemon = () => {
-    console.log(pokemon.name);
+    navigation.push('Pokémon');
   };
 
   return (
