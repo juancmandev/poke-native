@@ -58,10 +58,8 @@ const styles = StyleSheet.create({
     width: 52,
     textAlign: 'center',
     borderRadius: 12,
-    paddingTop: 4,
-    paddingBottom: 4,
-    paddingLeft: 8,
-    paddingRight: 8,
+    paddingVertical: 4,
+    paddingHorizontal: 8,
     backgroundColor: '#eee',
   },
   textId: {
