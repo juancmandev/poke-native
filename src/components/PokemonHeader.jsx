@@ -4,7 +4,6 @@ import { getColorByType } from '../utils/getColorByType';
 
 export default function PokemonHeader(props) {
   const { name, id, image, typeA } = props;
-  console.log(props);
   const color = getColorByType(typeA);
   const bgStyle = [{ backgroundColor: color, ...styles.bg }];
 
@@ -31,7 +30,7 @@ const styles = StyleSheet.create({
     width: '100%',
     height: 400,
     position: 'absolute',
-    borderBottomEndRadius: 300,
+    borderBottomRightRadius: 300,
     borderBottomLeftRadius: 300,
     transform: [{ scaleX: 2 }],
   },
