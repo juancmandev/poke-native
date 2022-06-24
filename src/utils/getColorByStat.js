@@ -1,8 +1,6 @@
 export const getColorByStat = (stat) => {
   let color = '';
 
-  console.log(stat);
-
   switch (stat) {
     case 'hp':
       color = '#ff0000';
