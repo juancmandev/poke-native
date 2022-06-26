@@ -10,20 +10,23 @@ import {
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { user, userDetails } from '../utils/userDb';
+import useAuth from '../hooks/useAuth';
 
 export default function LoginForm() {
   const [error, setError] = useState('');
+  const { login } = useAuth();
 
   const formik = useFormik({
     initialValues: initialValues(),
     validationSchema: Yup.object(validationSchema()),
     onSubmit: (formValue) => {
+      setError('');
       const { username, password } = formValue;
 
       if (username !== user.username || password !== user.password) {
         setError('Username or password are incorrect');
       } else {
-        console.log('Correct login!');
+        login(userDetails);
       }
     },
   });
