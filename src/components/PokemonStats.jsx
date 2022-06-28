@@ -8,7 +8,7 @@ export default function PokemonStats(props) {
   const barStyles = (number, stat) => {
     return {
       backgroundColor: `${getColorByStat(stat)}`,
-      width: `${number / 2}%`,
+      width: `${number / 2.5}%`,
     };
   };
 

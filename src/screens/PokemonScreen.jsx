@@ -5,6 +5,8 @@ import Icon from 'react-native-vector-icons/FontAwesome5';
 import PokemonHeader from '../components/PokemonHeader';
 import PokemonTypes from '../components/PokemonTypes';
 import PokemonStats from '../components/PokemonStats';
+import Favorite from '../components/Favorite';
+import useAuth from '../hooks/useAuth';
 
 export default function PokemonScreen(props) {
   const {
@@ -12,10 +14,11 @@ export default function PokemonScreen(props) {
     route: { params },
   } = props;
   const [pokemon, setPokemon] = useState(null);
+  const { auth } = useAuth();
 
   useEffect(() => {
     navigation.setOptions({
-      headerRight: () => null,
+      headerRight: () => (auth ? <Favorite id={pokemon?.id} /> : undefined),
       headerLeft: () => (
         <Icon
           name='arrow-left'
@@ -26,7 +29,7 @@ export default function PokemonScreen(props) {
         />
       ),
     });
-  }, [navigation, params]);
+  }, [navigation, params, pokemon, auth]);
 
   useEffect(() => {
     (async () => {
