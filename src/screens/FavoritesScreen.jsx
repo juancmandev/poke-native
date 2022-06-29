@@ -4,6 +4,7 @@ import { useFocusEffect } from '@react-navigation/native';
 import { getPokemonFavoriteApi } from '../api/favorites';
 import { getPokemonDetailsById } from '../api/getPokemon';
 import PokemonList from '../containers/PokemonList';
+import NotLogged from '../components/NotLogged';
 import useAuth from '../hooks/useAuth.js';
 
 export default function FavoritesScreen() {
@@ -40,9 +41,5 @@ export default function FavoritesScreen() {
     }, [auth])
   );
 
-  return !auth ? (
-    <Text>Login to see your favorite Pokémon</Text>
-  ) : (
-    <PokemonList pokemon={pokemon} />
-  );
+  return !auth ? <NotLogged /> : <PokemonList pokemon={pokemon} />;
 }
