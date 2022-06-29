@@ -21,6 +21,7 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "juan.manzanero.pokedex",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
