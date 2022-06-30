@@ -1,4 +1,4 @@
-#PokéNative 📱
+# PokéNative 📱
 
 A Pokédex developed with React Native.
 
