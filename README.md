@@ -1,6 +1,8 @@
 # PokéNative 📱
 
-A Pokédex developed with React Native.
+### A Pokédex developed with React Native.
+
+## Project images examples
 
 <div styles='display: flex'>
 <img src='readme_images/pokedex-1.png' width='300' height='600' alt='PokéNative image example' />
@@ -17,3 +19,11 @@ A Pokédex developed with React Native.
 <div styles='display: flex'>
 <img src='readme_images/pokedex-5.png' width='300' height='600' alt='PokéNative image example' />
 </div>
+
+## 📚 Things that I've learned with this project
+
+- ⚛️📱 React Native fundamentals, like:
+    ````
+        <View />
+        <Text />
+    ````
