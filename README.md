@@ -2,4 +2,4 @@
 
 A Pokédex developed with React Native.
 
-<img src='./readme_images/pokedex-1.png' width='500' height='250' />
+<img src='./readme_images/pokedex-1.png' width='200' height='400' />
