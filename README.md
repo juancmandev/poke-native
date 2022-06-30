@@ -23,7 +23,7 @@
 ## 📚 Things that I've learned with this project
 
 - ⚛️📱 React Native fundamentals, like:
-    ````
+    ````javascript
         <View />
         <Text />
     ````
