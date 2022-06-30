@@ -31,7 +31,7 @@
 - 🎨 Style components with StyleSheet
 - 🗺 Map components from an array and give them props to render them
 - 🦮 Fetch from the [PokéApi](https://pokeapi.co/), using the link to get each Pokémon details data
-- 🧻 "Infinite list" using the onEndReached, onEndReachedThreshold, ListFooterComponent and ActivityIndicator to load more data when whe rech the end of the current data
+- 🧻 "Infinite list" using the onEndReached, onEndReachedThreshold, ListFooterComponent and ActivityIndicator to load more data when reach the end of the current data
 - 📑 Reactive Form using Formik to set the state of the form and Yup to create validations
 - 📊 Style "graphs" like using numeric data
 - 🔐 Simple authetication to login
